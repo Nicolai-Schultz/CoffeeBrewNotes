@@ -30,4 +30,10 @@ class CoffeeNotesController extends Controller
         $note->save();
         return redirect('/coffee-notes');
     }
+
+    public function destroy($id) {
+        $note = CoffeeNote::findOrFail($id);
+        $note->delete();
+        return redirect('/coffee-notes');
+    }
 }
