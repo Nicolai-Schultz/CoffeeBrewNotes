@@ -47,11 +47,11 @@
             <table class="min-w-full border-separate border-spacing-0">
                 <thead>
                 <tr class="text-left text-sm text-stone-500">
+                    <th class="whitespace-nowrap px-6 py-5 font-medium">Type of Coffee</th>
                     <th class="whitespace-nowrap px-6 py-5 font-medium">Grind Size</th>
                     <th class="whitespace-nowrap px-6 py-5 font-medium">Bean</th>
                     <th class="whitespace-nowrap px-6 py-5 font-medium">Amount (g)</th>
-                    <th class="whitespace-nowrap px-6 py-5 font-medium">Water Temp (°C)</th>
-                    <th class="whitespace-nowrap px-6 py-5 font-medium">Brew Time</th>
+                    <th class="whitespace-nowrap px-6 py-5 font-medium">Preparation Steps</th>
                     <th class="whitespace-nowrap px-6 py-5 font-medium">Notes</th>
                     <th class="w-12 px-6 py-5"></th>
                 </tr>

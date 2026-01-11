@@ -24,22 +24,36 @@
 
     <!-- Form card -->
     <section class="rounded-2xl bg-white shadow-sm ring-1 ring-stone-200 p-8">
-        <form class="space-y-6">
-
-            <!-- Bean -->
-            <div>
-                <label class="block text-sm font-medium text-stone-600 mb-1">
-                    Bean
-                </label>
-                <input
-                    type="text"
-                    placeholder="Ethiopian Light Roast"
-                    class="w-full rounded-xl border border-stone-200 px-4 py-2.5 text-sm focus:border-stone-400 focus:outline-none focus:ring-2 focus:ring-stone-200"
-                />
-            </div>
+        <form method="POST" action="/add-note" class="space-y-6">
+            @csrf
 
             <!-- Grid -->
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <!-- Type of Coffee -->
+                <div>
+                    <label class="block text-sm font-medium text-stone-600 mb-1">
+                        Type of Coffee
+                    </label>
+                    <input
+                        name="type"
+                        type="text"
+                        placeholder="Espresso..."
+                        class="w-full rounded-xl border border-stone-200 px-4 py-2.5 text-sm focus:border-stone-400 focus:outline-none focus:ring-2 focus:ring-stone-200"
+                    />
+                </div>
+
+                <!-- Bean -->
+                <div>
+                    <label class="block text-sm font-medium text-stone-600 mb-1">
+                        Bean
+                    </label>
+                    <input
+                        name="bean"
+                        type="text"
+                        placeholder="Ethiopian Light Roast"
+                        class="w-full rounded-xl border border-stone-200 px-4 py-2.5 text-sm focus:border-stone-400 focus:outline-none focus:ring-2 focus:ring-stone-200"
+                    />
+                </div>
 
                 <!-- Grind Size -->
                 <div>
@@ -47,6 +61,7 @@
                         Grind Size
                     </label>
                     <input
+                        name="grind_size"
                         type="number"
                         placeholder="44"
                         class="w-full rounded-xl border border-stone-200 px-4 py-2.5 text-sm focus:border-stone-400 focus:outline-none focus:ring-2 focus:ring-stone-200"
@@ -59,35 +74,25 @@
                         Amount (g)
                     </label>
                     <input
+                        name="amount"
                         type="number"
                         placeholder="18"
                         class="w-full rounded-xl border border-stone-200 px-4 py-2.5 text-sm focus:border-stone-400 focus:outline-none focus:ring-2 focus:ring-stone-200"
                     />
                 </div>
+            </div>
 
-                <!-- Water Temp -->
-                <div>
-                    <label class="block text-sm font-medium text-stone-600 mb-1">
-                        Water Temperature (°C)
-                    </label>
-                    <input
-                        type="number"
-                        placeholder="93"
-                        class="w-full rounded-xl border border-stone-200 px-4 py-2.5 text-sm focus:border-stone-400 focus:outline-none focus:ring-2 focus:ring-stone-200"
-                    />
-                </div>
-
-                <!-- Brew Time -->
-                <div>
-                    <label class="block text-sm font-medium text-stone-600 mb-1">
-                        Brew Time
-                    </label>
-                    <input
-                        type="text"
-                        placeholder="3:30"
-                        class="w-full rounded-xl border border-stone-200 px-4 py-2.5 text-sm focus:border-stone-400 focus:outline-none focus:ring-2 focus:ring-stone-200"
-                    />
-                </div>
+            <!-- Preparation Steps -->
+            <div>
+                <label class="block text-sm font-medium text-stone-600 mb-1">
+                    Preparation Steps
+                </label>
+                <textarea
+                    name="preparation_steps"
+                    rows="1"
+                    placeholder="Used whiskers, flattened with leveler and stamped..."
+                    class="w-full rounded-xl border border-stone-200 px-4 py-3 text-sm focus:border-stone-400 focus:outline-none focus:ring-2 focus:ring-stone-200"
+                ></textarea>
             </div>
 
             <!-- Notes -->
@@ -96,6 +101,7 @@
                     Notes
                 </label>
                 <textarea
+                    name="notes"
                     rows="4"
                     placeholder="Balanced cup with light acidity and floral notes…"
                     class="w-full rounded-xl border border-stone-200 px-4 py-3 text-sm focus:border-stone-400 focus:outline-none focus:ring-2 focus:ring-stone-200"

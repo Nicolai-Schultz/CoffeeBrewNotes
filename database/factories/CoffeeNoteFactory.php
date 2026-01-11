@@ -17,10 +17,11 @@ class CoffeeNoteFactory extends Factory
     public function definition(): array
     {
         return [
-            'grind_size' => $this->faker->randomElement(['Fine', 'Medium', 'Coarse']),
+            'type' => $this->faker->randomElement(['Espresso', 'Pour Over', 'French Press', 'Cold Brew']),
             'bean' => $this->faker->word(),
+            'grind_size' => $this->faker->randomElement(['Fine', 'Medium', 'Coarse']),
             'amount' => $this->faker->randomFloat(2, 10, 30), // amount in grams
-            'brew_time' => $this->faker->numberBetween(120, 600), // brew time in seconds
+            'preparation_steps' => $this->faker->sentence(),
             'notes' => $this->faker->sentence(),
         ];
     }

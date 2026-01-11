@@ -12,8 +12,9 @@ class CoffeeNote extends Model
     public $timestamps = false;
 
     protected $fillable = [
-        'grind_size',
+        'type',
         'bean',
+        'grind_size',
         'amount',
         'brew_time',
         'notes',
