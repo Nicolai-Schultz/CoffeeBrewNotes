@@ -36,4 +36,11 @@ class CoffeeNotesController extends Controller
         $note->delete();
         return redirect('/coffee-notes');
     }
+
+    public function roll(){
+        $choiceA = request('choiceA');
+        $choiceB = request('choiceB');
+        $result = rand(0, 1) ? $choiceA : $choiceB;
+        return view('muffi-decider', ['result' => $result]);
+    }
 }

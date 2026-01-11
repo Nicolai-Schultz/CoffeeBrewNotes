@@ -8,6 +8,7 @@
 </head>
 
 <body class="min-h-screen bg-[#F5EFEA] text-stone-800">
+@include('components.navbar')
 <div class="mx-auto max-w-6xl px-6 py-10">
     <!-- Header -->
     <header class="flex items-center gap-3">
