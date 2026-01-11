@@ -38,8 +38,8 @@ class CoffeeNotesController extends Controller
     }
 
     public function roll(){
-        $choiceA = request('choiceA');
-        $choiceB = request('choiceB');
+        $choiceA = request('choice_a');
+        $choiceB = request('choice_b');
         $result = rand(0, 1) ? $choiceA : $choiceB;
         return view('muffi-decider', ['result' => $result]);
     }

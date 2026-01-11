@@ -7,7 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="min-h-screen bg-[#F5F1E8] text-stone-900">
-
+@include('components.navbar')
 <!-- Page -->
 <main class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-10">
     <!-- Header -->
@@ -135,9 +135,6 @@
                                 <div class="text-3xl font-semibold tracking-tight text-stone-900">
                                     {{$result}}
                                 </div>
-                                <p class="mt-2 text-sm text-stone-600">
-                                    This is placeholder content to show what the outcome panel will look like after a roll.
-                                </p>
                             </div>
 
                             <div class="mt-5 flex flex-wrap gap-2">
@@ -163,13 +160,6 @@
                                 <div class="text-sm text-stone-800">Filter</div>
                                 <div class="text-xs text-stone-500">Today</div>
                             </div>
-                            <div class="flex items-center justify-between rounded-xl border border-[#E7DEC9] bg-white/60 px-4 py-3">
-                                <div class="text-sm text-stone-800">Espresso</div>
-                                <div class="text-xs text-stone-500">Yesterday</div>
-                            </div>
-                            <div class="flex items-center justify-between rounded-xl border border-[#E7DEC9] bg-white/60 px-4 py-3">
-                                <div class="text-sm text-stone-800">Espresso</div>
-                                <div class="text-xs text-stone-500">Last week</div>
                             </div>
                         </div>
                     </div>
