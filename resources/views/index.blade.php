@@ -58,81 +58,13 @@
                 </thead>
 
                 <tbody class="text-sm">
-                <tr class="border-t border-stone-100">
-                    <td class="px-6 py-5 font-medium text-stone-700">44</td>
-                    <td class="px-6 py-5">Strong Roast Bean</td>
-                    <td class="px-6 py-5">18</td>
-                    <td class="px-6 py-5">93</td>
-                    <td class="px-6 py-5">3:30</td>
-                    <td class="px-6 py-5 text-stone-600">Balanced, slightly bitter</td>
-                    <td class="px-6 py-5">
-                        <button
-                            type="button"
-                            class="inline-flex h-9 w-9 items-center justify-center rounded-lg text-stone-500 hover:bg-stone-50 hover:text-stone-700"
-                            aria-label="Delete"
-                        >
-                            <!-- trash -->
-                            <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M3 6h18" />
-                                <path d="M8 6V4h8v2" />
-                                <path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6" />
-                                <path d="M10 11v6M14 11v6" />
-                            </svg>
-                        </button>
-                    </td>
-                </tr>
-
-                <tr class="border-t border-stone-100">
-                    <td class="px-6 py-5 font-medium text-stone-700">42</td>
-                    <td class="px-6 py-5">Light Roast Ethiopian</td>
-                    <td class="px-6 py-5">16</td>
-                    <td class="px-6 py-5">91</td>
-                    <td class="px-6 py-5">3:00</td>
-                    <td class="px-6 py-5 text-stone-600">Fruity, floral notes</td>
-                    <td class="px-6 py-5">
-                        <button
-                            type="button"
-                            class="inline-flex h-9 w-9 items-center justify-center rounded-lg text-stone-500 hover:bg-stone-50 hover:text-stone-700"
-                            aria-label="Delete"
-                        >
-                            <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M3 6h18" />
-                                <path d="M8 6V4h8v2" />
-                                <path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6" />
-                                <path d="M10 11v6M14 11v6" />
-                            </svg>
-                        </button>
-                    </td>
-                </tr>
-
-                <tr class="border-t border-stone-100">
-                    <td class="px-6 py-5 font-medium text-stone-700">46</td>
-                    <td class="px-6 py-5">Medium Roast Colombian</td>
-                    <td class="px-6 py-5">17</td>
-                    <td class="px-6 py-5">92</td>
-                    <td class="px-6 py-5">3:15</td>
-                    <td class="px-6 py-5 text-stone-600">Smooth, chocolatey</td>
-                    <td class="px-6 py-5">
-                        <button
-                            type="button"
-                            class="inline-flex h-9 w-9 items-center justify-center rounded-lg text-stone-500 hover:bg-stone-50 hover:text-stone-700"
-                            aria-label="Delete"
-                        >
-                            <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M3 6h18" />
-                                <path d="M8 6V4h8v2" />
-                                <path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6" />
-                                <path d="M10 11v6M14 11v6" />
-                            </svg>
-                        </button>
-                    </td>
-                </tr>
-
-                <!-- Add note row -->
+                @foreach ($notes as $note)
+                    @include('components.coffee-note', ['note' => $note])
+                @endforeach
                 <tr class="border-t border-stone-100">
                     <td colspan="7" class="px-6 py-5">
-                        <button
-                            type="button"
+                        <a
+                            href="/add-note"
                             class="inline-flex items-center gap-3 rounded-xl px-3 py-2 text-stone-600 hover:bg-stone-50"
                         >
                     <span class="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-stone-50 ring-1 ring-stone-200">
@@ -141,7 +73,7 @@
                       </svg>
                     </span>
                             <span class="font-medium">Add Coffee Note</span>
-                        </button>
+                        </a>
                     </td>
                 </tr>
                 </tbody>
