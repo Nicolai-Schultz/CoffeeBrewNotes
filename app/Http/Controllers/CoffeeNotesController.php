@@ -3,13 +3,18 @@
 namespace App\Http\Controllers;
 
 use App\Models\CoffeeNote;
+use App\Models\JournalEntry;
 
 class CoffeeNotesController extends Controller
 {
     public function show()
     {
         $notes = CoffeeNote::all();
-        return view('index', ['notes' => $notes]);
+        $journalEntries = JournalEntry::all();
+        return view('index', [
+            'notes' => $notes,
+            'journalEntries' => $journalEntries
+        ]);
     }
 
     public function store() {
