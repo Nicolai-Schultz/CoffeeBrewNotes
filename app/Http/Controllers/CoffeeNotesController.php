@@ -37,10 +37,4 @@ class CoffeeNotesController extends Controller
         return redirect('/coffee-notes');
     }
 
-    public function roll(){
-        $choiceA = request('choice_a');
-        $choiceB = request('choice_b');
-        $result = rand(0, 1) ? $choiceA : $choiceB;
-        return view('muffi-decider', ['result' => $result]);
-    }
 }
