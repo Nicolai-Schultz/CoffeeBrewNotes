@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class JournalEntry extends Model
 {
+    public $timestamps = false;
+
     protected $table = 'journal_entry';
     protected $guarded = [];
 }

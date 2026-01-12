@@ -44,7 +44,7 @@
                     Description
                 </label>
                 <textarea
-                    name="Description"
+                    name="description"
                     rows="4"
                     placeholder="Balanced cup with light acidity and floral notes…"
                     class="w-full rounded-xl border border-stone-200 px-4 py-3 text-sm focus:border-stone-400 focus:outline-none focus:ring-2 focus:ring-stone-200"

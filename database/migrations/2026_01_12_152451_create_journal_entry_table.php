@@ -13,12 +13,11 @@ return new class extends Migration
     {
         Schema::create('journal_entry', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
             $table->string('title');
             $table->text('description');
             $table->foreignId('coffee_note_id')
                 ->nullable()
-                ->constrained('coffee_notes')
+                ->constrained('coffee_note')
                 ->nullOnDelete();
         });
     }
