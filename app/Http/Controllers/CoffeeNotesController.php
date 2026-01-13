@@ -11,9 +11,14 @@ class CoffeeNotesController extends Controller
     {
         $notes = CoffeeNote::all();
         $journalEntries = JournalEntry::all();
+        $avgGrindSize = $this->calculateAverageGrindSize($notes, $journalEntries);
+        $avgAmount = $this->calculateAverageAmount($notes);
+
         return view('index', [
             'notes' => $notes,
-            'journalEntries' => $journalEntries
+            'journalEntries' => $journalEntries,
+            'avgGrindSize' => $avgGrindSize,
+            'avgAmount' => $avgAmount
         ]);
     }
 
@@ -43,4 +48,42 @@ class CoffeeNotesController extends Controller
         return redirect('/coffee-notes');
     }
 
+    /**
+     * @param $notes
+     * @param $journalEntries
+     * @return float
+     */
+    private function calculateAverageGrindSize($notes): float
+    {
+        $total = 0.0;
+        $count = 0;
+
+        foreach ($notes as $note) {
+            if (is_numeric($note->grind_size)) {
+                $total += (float) $note->grind_size;
+                $count++;
+            }
+        }
+
+        return $count > 0 ? $total / $count : 0.0;
+    }
+
+    /**
+     * @param $notes
+     * @return float
+     */
+    private function calculateAverageAmount($notes): float
+    {
+        $total = 0.0;
+        $count = 0;
+
+        foreach ($notes as $note) {
+            if (is_numeric($note->amount)) {
+                $total += (float) $note->amount;
+                $count++;
+            }
+        }
+
+        return $count > 0 ? $total / $count : 0.0;
+    }
 }
