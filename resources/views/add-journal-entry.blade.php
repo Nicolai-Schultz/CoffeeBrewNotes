@@ -60,7 +60,7 @@
                 >
                     <option value="" selected disabled>Select a coffee note…</option>
                     @foreach ($notes as $note)
-                        <option value="{{ $note->id }}">{{ $note->id }}</option>
+                        <option value="{{ $note->id }}">{{ $note->title }}</option>
                     @endforeach
                 </select>
             </div>

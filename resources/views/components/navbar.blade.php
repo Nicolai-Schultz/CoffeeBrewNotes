@@ -20,6 +20,10 @@
                        class="rounded-xl px-3 py-2 text-sm font-medium text-stone-700 hover:text-stone-900 hover:bg-[#EDE5D6] transition">
                         MuffiDecider
                     </a>
+                    <a href="/workout-notes"
+                       class="rounded-xl px-3 py-2 text-sm font-medium text-stone-700 hover:text-stone-900 hover:bg-[#EDE5D6] transition">
+                        WorkoutNotes
+                    </a>
                 </div>
 
                 <!-- Right action -->

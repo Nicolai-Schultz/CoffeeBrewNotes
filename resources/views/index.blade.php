@@ -28,17 +28,44 @@
     <section class="mt-6 flex flex-wrap gap-4">
         <div class="flex items-center gap-3 rounded-full bg-white px-6 py-3 shadow-sm ring-1 ring-stone-200">
             <span class="text-sm text-stone-500">Total Brews</span>
-            <span class="text-sm font-semibold">3</span>
-        </div>
+                <span class="text-sm font-semibold">
+                    {{$notes->count()}}
+                </span>
+            </div>
 
         <div class="flex items-center gap-3 rounded-full bg-white px-6 py-3 shadow-sm ring-1 ring-stone-200">
             <span class="text-sm text-stone-500">Avg Grind Size</span>
-            <span class="text-sm font-semibold">44.0</span>
+            <span class="text-sm font-semibold">
+                @php
+                    $totalGrindSize = 0;
+                    $count = 0;
+                    foreach ($notes as $note) {
+                        if (is_numeric($note->grind_size)) {
+                            $totalGrindSize += $note->grind_size;
+                            $count++;
+                        }
+                    }
+                    $avgGrindSize = $count > 0 ? $totalGrindSize / $count : 0;
+                    echo number_format($avgGrindSize, 1) . ' clicks';
+                @endphp
+            </span>
         </div>
 
         <div class="flex items-center gap-3 rounded-full bg-white px-6 py-3 shadow-sm ring-1 ring-stone-200">
             <span class="text-sm text-stone-500">Avg Amount</span>
-            <span class="text-sm font-semibold">17.0g</span>
+            <span class="text-sm font-semibold">
+                @php
+                    $totalAmount = 0;
+                    $count = 0;
+                    foreach ($notes as $note) {
+                        if (is_numeric($note->amount)) {
+                            $totalAmount += $note->amount;
+                            $count++;
+                        }
+                    }
+                    $avgAmount = $count > 0 ? $totalAmount / $count : 0;
+                    echo number_format($avgAmount, 1) . ' g';
+                @endphp</span>
         </div>
     </section>
 
@@ -48,6 +75,7 @@
             <table class="min-w-full border-separate border-spacing-0">
                 <thead>
                 <tr class="text-left text-sm text-stone-500">
+                    <th class="whitespace-nowrap px-6 py-5 font-medium">Title</th>
                     <th class="whitespace-nowrap px-6 py-5 font-medium">Type of Coffee</th>
                     <th class="whitespace-nowrap px-6 py-5 font-medium">Grind Size</th>
                     <th class="whitespace-nowrap px-6 py-5 font-medium">Bean</th>

@@ -26,6 +26,7 @@ class CoffeeNotesController extends Controller
             'notes' => 'required'
         ]);
         $note = new CoffeeNote();
+        $note->title = request('title');
         $note->type = request('type');
         $note->bean = request('bean');
         $note->grind_size = request('grind_size');

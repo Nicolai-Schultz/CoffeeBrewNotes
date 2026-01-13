@@ -1,5 +1,6 @@
 <!-- Place this inside for each loop and get information from the database and display -->
 <tr class="border-t border-stone-100">
+    <td class="px-6 py-5">{{$note->title}}</td>
     <td class="px-6 py-5">{{$note->type}}</td>
     <td class="px-6 py-5">{{$note->bean}}</td>
     <td class="px-6 py-5 font-medium text-stone-700">{{$note->grind_size}}</td>
