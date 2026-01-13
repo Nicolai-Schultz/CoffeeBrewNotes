@@ -28,7 +28,7 @@ class CoffeeNotesController extends Controller
             'grind_size' => 'required',
             'amount' => 'required',
             'preparation_steps' => 'required',
-            'notes' => 'required'
+            'extraction_notes' => 'required'
         ]);
         $note = new CoffeeNote();
         $note->title = request('title');
@@ -37,7 +37,7 @@ class CoffeeNotesController extends Controller
         $note->grind_size = request('grind_size');
         $note->amount = request('amount');
         $note->preparation_steps = request('preparation_steps');
-        $note->notes = request('notes');
+        $note->extraction_notes = request('extraction_notes');
         $note->save();
         return redirect('/coffee-notes');
     }

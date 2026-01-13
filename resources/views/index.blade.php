@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Coffee Brew Journal</title>
+    <title>Coffee Brews and Notes</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
@@ -21,7 +21,7 @@
             <path d="M9 3v2M12 3v2M15 3v2" />
           </svg>
         </span>
-        <h1 class="text-2xl font-semibold tracking-tight">Coffee Brew Journal</h1>
+        <h1 class="text-2xl font-semibold tracking-tight">Coffee Brews</h1>
     </header>
 
     <!-- Stat pills -->

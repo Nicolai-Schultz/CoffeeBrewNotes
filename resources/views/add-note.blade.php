@@ -110,12 +110,12 @@
             <!-- Notes -->
             <div>
                 <label class="block text-sm font-medium text-stone-600 mb-1">
-                    Notes
+                    Extraction Ratio and Yield Time.
                 </label>
                 <textarea
-                    name="notes"
+                    name="extraction_notes"
                     rows="4"
-                    placeholder="Balanced cup with light acidity and floral notes…"
+                    placeholder="1:2 ratio, yield time 30 seconds; perfect cup..."
                     class="w-full rounded-xl border border-stone-200 px-4 py-3 text-sm focus:border-stone-400 focus:outline-none focus:ring-2 focus:ring-stone-200"
                 ></textarea>
             </div>
@@ -142,6 +142,15 @@
 
         </form>
     </section>
+    <div class="mt-6">
+        <a href="/coffee-notes"
+           class="inline-flex h-9 items-center gap-2 rounded-xl bg-white px-3 shadow-sm ring-1 ring-stone-200 text-sm font-medium text-stone-700 hover:bg-stone-50">
+            <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M15 18l-6-6 6-6" />
+            </svg>
+            Back
+        </a>
+    </div>
 </div>
 </body>
 </html>
