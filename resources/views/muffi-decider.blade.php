@@ -173,6 +173,15 @@
             </div>
         </aside>
     </div>
+    <div class="mt-6">
+        <a href="/coffee-notes"
+           class="inline-flex h-9 items-center gap-2 rounded-xl bg-white px-3 shadow-sm ring-1 ring-stone-200 text-sm font-medium text-stone-700 hover:bg-stone-50">
+            <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M15 18l-6-6 6-6" />
+            </svg>
+            Back
+        </a>
+    </div>
 
     <!-- Footer (subtle) -->
     <footer class="mt-10 text-xs text-stone-500">

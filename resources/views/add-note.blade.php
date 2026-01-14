@@ -113,7 +113,7 @@
                     Extraction Ratio and Yield Time.
                 </label>
                 <textarea
-                    name="extraction_notes"
+                    name="notes"
                     rows="4"
                     placeholder="1:2 ratio, yield time 30 seconds; perfect cup..."
                     class="w-full rounded-xl border border-stone-200 px-4 py-3 text-sm focus:border-stone-400 focus:outline-none focus:ring-2 focus:ring-stone-200"
